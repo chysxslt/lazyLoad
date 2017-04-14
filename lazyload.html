@@ -7,7 +7,7 @@
     <script type="text/javascript" src="js/require.js" data-main="lazyload.js"></script>
     <style type="text/css">
     ul {
-        float: left;
+        display: inline-block;
     }
 
     li {
@@ -26,6 +26,14 @@
         width: 200px;
         height: 240px;
         /* background-color: white; */
+    }
+
+    button{
+        font-family: "微软雅黑";
+        display: block;
+        margin:0 auto;
+        font-size: 1.4rem;
+        font-weight: bold;
     }
     </style>
 </head>
@@ -262,6 +270,7 @@
         <li><img src="./img/nojpg.jpg" isloaded="false" data-src="./img/001.jpg" alt=""></li>
 
     </ul>
+    <button>返回顶部</button>
 </body>
 
 </html>

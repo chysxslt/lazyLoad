@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2017-04-14 09:23:18
  * @Last Modified by:   chysxslt
- * @Last Modified time: 2017-04-14 14:47:36
+ * @Last Modified time: 2017-04-14 16:01:53
  */
 
 
@@ -31,22 +31,26 @@ define(['jquery'], function($) {
         if (isShow($cur)) {
           setTimeout(function() {
               showImg($cur);
-            }, 500) //设置时间是为了更好的看出效果
+            }, 200) //设置时间是为了更好的看出效果
         }
       }
     });
   }
 
   function showImg($el) {
-    $el.attr('src', $el.attr('data-src'));
+    $el.attr('src', $el.attr('data-src'));//显示真实src
     $el.attr('isloaded', 'true');
   }
 
+  function backTop() {
+    $('body').animate({scrollTop:'0px'}, 2000);
+  }
   return {
     imgAlert: imgAlert,
     isShow: isShow,
     checkShow: checkShow,
-    showImg: showImg
+    showImg: showImg,
+    backTop:backTop
   };
 });
 
